@@ -1,19 +1,4 @@
-/**/
-/**/
-/**/
-body{
-    background-color:beige ;
-}
-/*default 컬러*/
-h1{
-    color: cornflowerblue;
-    transition: color .5s ease-in-out; /*5ms동안 작동됨*/
-}
-.clicked
-{
-    color:tomato;
-}
-.sexy-font
-{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.hidden{
+    /*html문서를 안보이게함*/
+    display:none; /**/
 }
