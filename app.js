@@ -337,7 +337,7 @@ function onLoginSubmit(event) //관행적으로 event라고 적음.
     localStorage.setItem(USERNAME_KEY,username);
     paintGreetings(username); //greeting 헤딩태그에 사용자 입력값을 보여줌.
 }
-//데베에 저장된 value를 불러옴
+//키 값을 통해 데베에 저장된 value를 불러옴.
 function paintGreetings(username)
 {
     greeting.innerText="Hello " + username; //헤딩 태그의 내용 수정(자바스크립트 방식)
