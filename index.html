@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css 연결-->
+    <link rel="stylesheet" href="style.css"/>
+    <title>Momentum App1</title>
+</head>
+<body>
+    <!--사용자 input step1-->
+    <!-- input에서 유효성검사:required maxlength-> 최대 길이만 입력하게 함.
+        이는 빈칸이면 alert,15자가 넘어가지 않음 . input이 form안에 있어야만 가능함.
+
+    <form id="login-form">
+        <input required maxlength="15" type="text" placeholder="what is your name?" />
+        <button>Log In</button>
+    </form>
+    -->
+    <!-- anchor elements: 링크클릭하면 해당 웹페이지로 이동가능
+      <a href="https://nomadcoders.co">Go to Courses</a>
+    -->
+    <!--사용자 input step2 (form은 숨기고 헤딩 태그 내용은 보이게하기)-->
+    <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="what is your name?" />
+        <button>Log In</button>
+    </form>
+    <h1 id="greeting1" clas="hidden"></h1>
+    <h1 id="greeting2" clas="hidden"></h1>
+    <script src="app.js"></script>
+</body>
+</html>
