@@ -9,7 +9,6 @@ console.log(daysOfWeek[4]);
 daysOfWeek.push("sun");
 console.log(daysOfWeek);*/
 
-
 /*<자바스크립트의 객체>
 /*objects {} 중괄호로 사용, 구조체와 비슷하게 변수들을 정의 한다고 보는 개념
 오브젝트의 정의는"="을 사용, 오브젝트 내의 변수 정의는 ":"으로 정의. 이는 key:value를 뜻함
@@ -24,8 +23,6 @@ console.log(player);
 player.lastName="potato"; //array와 달리 push안쓰고 밖에서 그냥 정의하면 됨.
 player.points=player.points+15;
 console.log(player); */
-
-
 
 /*<자바스크립트의 함수>
 //function, 인자에 데이터 넣기
@@ -265,8 +262,8 @@ h1.addEventListener("click",handleh1Click);
 */
 
 /*Input Values*/
-const loginForm=document.querySelector("#login-form");
-const loginInput=document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
 /* 버튼클릭시 사용자 입력받기(form 사용x)
 const loginButton=loginForm.querySelector("button");
@@ -324,120 +321,33 @@ loginForm.addEventListener("submit",onLoginSubmit); //submit 동작(기본 동�
 2. localStroage.getItem("key"); //값 갖고오기
 3. localStroage.removeItem("key"); //저장 지우기
 */
-/*Loading Username*/ 
-const greeting=document.querySelector("#greeting1");
-const HIDDEN_CLASSNAME="hidden"; //매크로 변수
-const USERNAME_KEY="username";
-function onLoginSubmit(event) //관행적으로 event라고 적음.
-{
-    //버튼 클릭시, 즉 페이지가 새로고침(submit되어서 새로고침시)
-    event.preventDefault(); //브라우저의 기본동작을 만들어줌
-    loginForm.classList.add(HIDDEN_CLASSNAME); //form을 사라지게 하는 css 추가
-    const username=loginInput.value;
-    localStorage.setItem(USERNAME_KEY,username);
-    paintGreetings(username); //greeting 헤딩태그에 사용자 입력값을 보여줌.
+/*Loading Username*/
+const greeting = document.querySelector("#greeting1");
+const HIDDEN_CLASSNAME = "hidden"; //매크로 변수
+const USERNAME_KEY = "username";
+function onLoginSubmit(event) {
+  //관행적으로 event라고 적음.
+  //버튼 클릭시, 즉 페이지가 새로고침(submit되어서 새로고침시)
+  event.preventDefault(); //브라우저의 기본동작을 만들어줌
+  loginForm.classList.add(HIDDEN_CLASSNAME); //form을 사라지게 하는 css 추가
+  const username = loginInput.value;
+  localStorage.setItem(USERNAME_KEY, username);
+  paintGreetings(username); //greeting 헤딩태그에 사용자 입력값을 보여줌.
 }
 //키 값을 통해 데베에 저장된 value를 불러옴.
-function paintGreetings(username)
-{
-    greeting.innerText="Hello " + username; //헤딩 태그의 내용 수정(자바스크립트 방식)
-    //form의 숨김 처리를 없애므로써 헤딩태그내용이 보임.
-    greeting.classList.remove(HIDDEN_CLASSNAME);
+function paintGreetings(username) {
+  greeting.innerText = "Hello " + username; //헤딩 태그의 내용 수정(자바스크립트 방식)
+  //form의 숨김 처리를 없애므로써 헤딩태그내용이 보임.
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-const saveUsername=  localStorage.getItem(USERNAME_KEY); //getItem을 통해 올림.
-if (saveUsername==null) //사용자가 입력하기전이면 FORM은 그대로 보여주고
-{  
-    loginForm.classList.remove(HIDDEN_CLASSNAME); 
-    loginForm.addEventListener("submit",onLoginSubmit); //submit 동작(기본 동작)
-
-}else{ //사용자가 입력하면 FORM은 안보이게 하고, 사용자 입력값을 보여주기(데베에값을)
-    //show the greeting text
-    paintGreetings(saveUsername);
+const saveUsername = localStorage.getItem(USERNAME_KEY); //getItem을 통해 올림.
+if (saveUsername == null) {
+  //사용자가 입력하기전이면 FORM은 그대로 보여주고
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit); //submit 동작(기본 동작)
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+else {
+  //사용자가 입력하면 FORM은 안보이게 하고, 사용자 입력값을 보여주기(데베에값을)
+  //show the greeting text
+  paintGreetings(saveUsername);
+}

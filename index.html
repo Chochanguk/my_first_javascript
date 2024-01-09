@@ -18,7 +18,7 @@
     </form>
     -->
     <!-- anchor elements: 링크클릭하면 해당 웹페이지로 이동가능
-      <a href="https://nomadcoders.co">Go to Courses</a>
+    <a href="https://nomadcoders.co">Go to Courses</a>
     -->
     <!--사용자 input step2 (form은 숨기고 헤딩 태그 내용은 보이게하기)
     <form class="hidden" id="login-form">
@@ -30,20 +30,33 @@
     <script src="app.js"></script>
     -->
     <!--clock-->
+    <h2 id="clock">00:00:00</h2>
     <form class="hidden" id="login-form">
         <input required maxlength="15" type="text" placeholder="what is your name?" />
         <button>Log In</button>
     </form>
-    <h2 id="clock">00:00:00</h2>
     <h1 clas="hidden" id="greeting"></h1>
+<!-- to-do-list form과 list-->
+    <form id="todo-form">
+        <!--placeholder는 hint text와 같음,required는 반드시 입력해야하는것을 의미(유효성검사)-->
+    <input type="text" placeholder="Write a TO DO and Press Enter" required>
+        
+    </form>
+    <!--
+    <ul>은 HTML에서 목록을 나타내는 태그 중 하나로, "unordered list"의 약어이다.
+    <ul> 태그 안에 <li>(list item) 태그를 사용하여 리스트의 각 항목을 정의험.-->
+    <ul id="todo-list"></ul>
+    <!-- 웹페이지에 띄울 명언,작가-->
     <div id="quote">
         <span></span>
         <span></span>
     </div>
-
+<!-- js-->
     <script src="greetings.js"></script>
     <script src="clock.js"></script>
     <script src="quotes.js"></script>
     <script src="backgroud.js"></script>
+    <script src="todo.js"></script>
+    
 </body>
 </html>
