@@ -76,7 +76,6 @@ if (savedToDos!=null)d
     parsedToDos.forEach(paintToDO);
 }
 
-
 /*배열의 filter 메소드 사용법
 const arr=[1,2,3,4,5];
 function sexyFilter(item)
