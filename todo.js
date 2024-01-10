@@ -66,7 +66,7 @@ toDoFrom.addEventListener("submit",handleToDoSubmit);
 const savedToDos=localStorage.getItem(TODOS_KEY);
 
 
-if (savedToDos!=null)d
+if (savedToDos!=null)
 {
     //JSON.stringify(toDos):어떤 object난 array 어떠 js코드를 string으로 만듦.!!!!!!!
     const parsedToDos=JSON.parse(savedToDos); // 위에서 만든 string을 array로 구분해줌!!!!!!
